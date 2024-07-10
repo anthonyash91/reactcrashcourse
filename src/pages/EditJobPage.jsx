@@ -40,11 +40,10 @@ export default function EditJobPage({ updateJobSubmit }) {
 
       updateJobSubmit(updatedJob);
       toast.success("Job listing updated successfully.");
+      return navigate(`/jobs/${id}`);
     } catch (error) {
       toast.error("Error updating job.");
       console.log("Error fetching data", error);
-    } finally {
-      return navigate(`/jobs/${id}/#nav`);
     }
   };
 

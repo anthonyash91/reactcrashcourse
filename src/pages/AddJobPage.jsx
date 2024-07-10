@@ -35,11 +35,10 @@ export default function AddJobPage({ addJobSubmit }) {
 
       addJobSubmit(newJob);
       toast.success("New job added successfully.");
+      return navigate("/jobs");
     } catch (error) {
       toast.error("Error deleting job.");
       console.log("Error fetching data", error);
-    } finally {
-      return navigate("/jobs");
     }
   };
 
