@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/MainLayout";
 import JobsPage from "./pages/JobsPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import JobPage, { jobLoader } from "./pages/JobPage";
+import JobPage from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
 import EditJobPage from "./pages/EditJobPage";
 
@@ -52,14 +52,9 @@ export default function App() {
         <Route
           path="/edit-job/:id"
           element={<EditJobPage updateJobSubmit={updateJob} />}
-          loader={jobLoader}
         />
         <Route path="*" element={<NotFoundPage />} />
-        <Route
-          path="/jobs/:id"
-          element={<JobPage deleteJob={deleteJob} />}
-          loader={jobLoader}
-        />
+        <Route path="/jobs/:id" element={<JobPage deleteJob={deleteJob} />} />
       </Route>
     )
   );

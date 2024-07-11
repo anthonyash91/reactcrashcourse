@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaMapMarker } from "react-icons/fa";
 
